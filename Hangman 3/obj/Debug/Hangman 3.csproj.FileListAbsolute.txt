@@ -1,0 +1,7 @@
+C:\Users\matht\source\repos\Hangman 3\Hangman 3\obj\Debug\Hangman 3.csproj.AssemblyReference.cache
+C:\Users\matht\source\repos\Hangman 3\Hangman 3\obj\Debug\Hangman 3.csproj.CoreCompileInputs.cache
+C:\Users\matht\source\repos\Hangman 3\Hangman 3\bin\Debug\Hangman 3.exe.config
+C:\Users\matht\source\repos\Hangman 3\Hangman 3\bin\Debug\Hangman 3.exe
+C:\Users\matht\source\repos\Hangman 3\Hangman 3\bin\Debug\Hangman 3.pdb
+C:\Users\matht\source\repos\Hangman 3\Hangman 3\obj\Debug\Hangman 3.exe
+C:\Users\matht\source\repos\Hangman 3\Hangman 3\obj\Debug\Hangman 3.pdb
