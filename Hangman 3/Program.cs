@@ -10,7 +10,8 @@ namespace Hangman_3
     {
         static void Main(string[] args)
         {
-
+            int remainingGuesses = 6;
+            string guessedLetters = "";
             var secretWord = new List<string> { "one", "two", "three", "four" };
             foreach (string word in secretWord)
             {
@@ -20,8 +21,8 @@ namespace Hangman_3
             var random = new Random();
             int index = random.Next(secretWord.Count);
             string chosenWord = secretWord[index];
-            Console.WriteLine(secretWord[index]);
-            Console.ReadLine();
+            //Console.WriteLine(secretWord[index]);
+            //Console.ReadLine();
             string displayWord = "";
             foreach (char letter in chosenWord)
             {
@@ -29,30 +30,61 @@ namespace Hangman_3
             }
             Console.WriteLine(displayWord.ToString());
             char letterGuess;
-            Console.WriteLine("Enter A Guess: ");
-            letterGuess = char.Parse(Console.ReadLine());
-            Console.WriteLine(letterGuess);
-            Console.ReadLine();
-
-            if (chosenWord.Contains(letterGuess))
+            bool isGameRunning = true;
+            
+            while (isGameRunning) 
             {
-                for (int i = 0; i < chosenWord.Length; i++)
+                Console.WriteLine("Enter A Guess: ");
+                letterGuess = char.Parse(Console.ReadLine());
+                //Console.WriteLine(letterGuess);
+                //Console.ReadLine();
+
+                if (chosenWord.Contains(letterGuess))
                 {
-                    if (chosenWord[i].Equals(letterGuess))
+                    for (int i = 0; i < chosenWord.Length; i++)
                     {
-                        int n = 2 * i;
-                        StringBuilder sb = new StringBuilder(displayWord);
-                        sb[n] = letterGuess;
-                        displayWord = sb.ToString();
+                        if (chosenWord[i].Equals(letterGuess))
+                        {
+                            int n = 2 * i;
+                            StringBuilder sb = new StringBuilder(displayWord);
+                            sb[n] = letterGuess;
+                            displayWord = sb.ToString();
+                        }
+                    }
+                    Console.WriteLine(displayWord);
+                    string currentWord = displayWord.Replace(" ", "");
+                    if ( currentWord == chosenWord)
+                    {
+                        Console.WriteLine("You guessed it! Congratulations!");
+                        Console.ReadKey();
+                        isGameRunning = false; 
                     }
                 }
-                Console.WriteLine(displayWord);
+                else
+                {
+                    if (!guessedLetters.Contains(letterGuess))
+                    {
+                        guessedLetters += (Char.ToString(letterGuess)) + " ";
+                        Console.WriteLine("Boo!");
+                        remainingGuesses -= 1;
+                        Console.WriteLine($"Remaining Guesses: {remainingGuesses}");
+                        Console.WriteLine($"Guessed Letters: {guessedLetters}");
+                        if (remainingGuesses == 0)
+                        {
+                            Console.WriteLine("You've run out of guesses. Too bad!");
+                            Console.ReadLine();
+                            isGameRunning = false;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("You've already guessed that letter.");
+                    }
+                    
+                }
+                //Console.ReadLine();
             }
-            else
-            {
-                Console.WriteLine("Boo!");
-            }
-            Console.ReadLine();
+            
 
 
         }
