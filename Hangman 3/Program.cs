@@ -64,7 +64,7 @@ namespace Hangman_3
             asciiHangman[0] = " +---+ \n" +
                               " |   | \n" +
                               " 0   | \n" +
-                              "(|)  | \n" +
+                              "(|-  | \n" +
                               "] [  | \n" +
                               "     | \n" +
                               "=========";
@@ -90,6 +90,13 @@ namespace Hangman_3
             while (isGameRunning) 
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗");
+                Console.WriteLine("██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║");
+                Console.WriteLine("███████║███████║██╔██╗ ██║██║  ███╗██╔████╔██║███████║██╔██╗ ██║");
+                Console.WriteLine("██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║");
+                Console.WriteLine("██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║");
+                Console.WriteLine("╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝");
                 Console.WriteLine(asciiHangman[remainingGuesses]);
                 Console.WriteLine(displayWord);
                 Console.WriteLine("Enter A Guess: ");
@@ -127,6 +134,13 @@ namespace Hangman_3
                         if (remainingGuesses == 0)
                         {
                             Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗");
+                            Console.WriteLine("██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║");
+                            Console.WriteLine("███████║███████║██╔██╗ ██║██║  ███╗██╔████╔██║███████║██╔██╗ ██║");
+                            Console.WriteLine("██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║");
+                            Console.WriteLine("██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║");
+                            Console.WriteLine("╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝");
                             Console.WriteLine(asciiHangman[remainingGuesses]);
                             Console.WriteLine($"The word was: {chosenWord}");
                             Console.ForegroundColor = ConsoleColor.Red;
