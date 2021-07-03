@@ -12,7 +12,9 @@ namespace Hangman_3
         {
             int remainingGuesses = 6;
             string guessedLetters = "";
-            var secretWord = new List<string> { "one", "two", "three", "four" };
+            var secretWord = new List<string> { "HANGMAN", "APPLE", "TOWER", "SMARTPHONE", "PROGRAMMING", "AWKWARD", "BANJO",
+            "DWARVES", "FISHHOOK", "JAZZY", "JUKEBOX", "MEMENTO", "MYSTIFY", "OXYGEN", "PIXEL",
+            "ZOMBIE", "NUMBSKULL", "BAGPIPES", "COMPUTER", "EASTER", "CHRISTMAS", "COFFEE" };
             foreach (string word in secretWord)
             {
                 Console.WriteLine(word);
@@ -84,9 +86,6 @@ namespace Hangman_3
                 }
                 //Console.ReadLine();
             }
-            
-
-
         }
     }
 }
