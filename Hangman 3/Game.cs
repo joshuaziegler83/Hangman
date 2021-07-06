@@ -9,6 +9,7 @@ namespace Hangman_3
     class Game
     {
         static void Main(string[] args)
+            //by Frank Carag, Brandon Bautista and Joshua Ziegler
         {
             GameIO gameIO = new GameIO();
             gameIO.Run();
